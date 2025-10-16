@@ -9,12 +9,12 @@ export const getPokemonList = async (limit = 30) => {
     return res.data.results
 }
 
-export const getPokemonDetail = async (name) => {
+export const getPokemonDetail = async (name:string) => {
     const res = await api.get(`/pokemon/${name}`)
     return res.data
 }
 
-export const getPokemonSpecies = async (id) => {
+export const getPokemonSpecies = async (id:number) => {
     const res = await api.get(`/pokemon-species/${id}`)
     return res.data
 }
